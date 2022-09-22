@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 0.5rem;
+}
+
+.border {
+    border: 2px solid red;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* global css  start*/
+.hr-vr-center{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+p{
+    font-size: 1.1rem;
+    color: gray;
+    word-spacing: 4px;
+    line-height: 28px;
+}
+h2{
+    font-weight: 500;
+
+}
+/* global css  end*/
+
+.nav-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.logo h2 {
+    font-weight: 500;
+}
+
+.hamburger-icon i {
+    font-size: 1.5rem;
+}
+
+.logo h2,
+.hamburger-icon i {
+    color: white;
+}
+/* <!-- hero section start  --> */
+
+.hero-section {
+    position: relative;
+    height: 100vh;
+    top: -65px;
+    overflow: hidden;
+    z-index: -1;
+    background-image:linear-gradient(#00000055,#00000082) ,url('./../assets/hero\ img.png');
+    background-size: cover;
+}
+.hero-section .container{
+    height: inherit;
+   
+    text-align: center;
+}
+.title h3{
+    color: white;
+    text-transform: uppercase;
+}
+
+.heading{
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    text-transform: capitalize;
+    color: white;
+    margin-top: 5rem;
+}
+
+/* <!-- hero section end  --> */
+
+/* <!-- cards section  start--> */
+/* .cards{
+    position: relative;
+    top: -200px;
+} */
+
+.card-content{
+    margin: .8rem;
+    padding: 1.8rem 1.5rem;
+    background-color: white;
+    border: 2px solid #d7d7d7;
+    border-radius: 2px;
+    text-align: center;
+
+}
+.card-icon{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: #ff224f;
+    margin: auto;
+}
+.card-icon i{
+    font-size: 2.5rem;
+    color: white;
+}
+.card-body h2{
+    padding: 1.2rem 0;
+}
+.card-body p{
+    font-style: italic;
+    padding-bottom: 2rem;
+}
+.cards-row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.cards-row>*{
+    width: 100%;
+}
+/* <!-- cards section end--> */
+
+
+/* <!-- easy-way section  start  --> */
+
+.smart{
+    height: 100vh;
+    margin-top: 3rem;
+    background-image:linear-gradient(90deg,#7d7d7d00,#c1c1c144) , url('./../assets/bg-1.jpg');
+    background-size: cover;
+}
+.smart-container-row{
+    display: flex;
+    justify-content: center;
+}
+.smart-container-col{
+    width: 100%;
+    padding: 2.5rem;
+}
+.easy-way h3{
+    color: #ff224f;
+}
+.easy-way h2{
+ text-transform: capitalize;
+ margin: 1rem 0 2.5rem;
+ font-weight: 600;
+}
+
+
+/* <!-- easy-way section  end  --> */
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width:479px) {
+    .hero-section .container{
+        justify-content: flex-start;
+        text-align: unset;
+    }
+
+    .cards-row>*{
+        width: 50%;
+    }
+
+
+}
+@media only screen and (min-width:766px) {
+    .cards-row>*{
+        width: 33.33%;
+    }
+
+   
+
+}
+@media only screen and (min-width:990px) {
+    .cards-row>*{
+        width: 25%;
+    }
+    .smart-container-row{
+        justify-content: flex-end;
+    }
+    .smart-container-col{
+        width: 50%;
+        padding: 2.5rem;
+    }
+}
