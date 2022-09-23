@@ -21,21 +21,35 @@ body {
 }
 
 /* global css  start*/
-.hr-vr-center{
-display: flex;
-align-items: center;
-justify-content: center;
+.hr-vr-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-p{
+
+p {
     font-size: 1.1rem;
     color: gray;
     word-spacing: 4px;
     line-height: 28px;
 }
-h2{
-    font-weight: 500;
+
+h2 {
+    font-weight: 600;
+}
+
+h3 {
+    color: #ff224f;
 
 }
+.my-1 {
+    margin: 1rem 0;
+}
+.my-2{
+    margin: 2rem 0;
+
+}
+
 /* global css  end*/
 
 .nav-row {
@@ -56,6 +70,7 @@ h2{
 .hamburger-icon i {
     color: white;
 }
+
 /* <!-- hero section start  --> */
 
 .hero-section {
@@ -64,20 +79,24 @@ h2{
     top: -65px;
     overflow: hidden;
     z-index: -1;
-    background-image:linear-gradient(#00000055,#00000082) ,url('./../assets/hero\ img.png');
+    background-image: linear-gradient(#00000055, #00000082), url('./../assets/hero\ img.png');
     background-size: cover;
 }
-.hero-section .container{
+
+.hero-section .container {
     height: inherit;
-   
+
     text-align: center;
 }
-.title h3{
+
+.title h3 {
     color: white;
     text-transform: uppercase;
+    font-weight: 500;
+
 }
 
-.heading{
+.heading {
     font-size: clamp(1.5rem, 3vw, 2.5rem);
     text-transform: capitalize;
     color: white;
@@ -92,7 +111,7 @@ h2{
     top: -200px;
 } */
 
-.card-content{
+.card-content {
     margin: .8rem;
     padding: 1.8rem 1.5rem;
     background-color: white;
@@ -101,59 +120,87 @@ h2{
     text-align: center;
 
 }
-.card-icon{
+
+.card-icon {
     width: 100px;
     height: 100px;
     border-radius: 100%;
     background-color: #ff224f;
     margin: auto;
 }
-.card-icon i{
+
+.card-icon i {
     font-size: 2.5rem;
     color: white;
 }
-.card-body h2{
+
+.card-body h2 {
     padding: 1.2rem 0;
 }
-.card-body p{
+
+.card-body p {
     font-style: italic;
     padding-bottom: 2rem;
 }
-.cards-row{
+
+.cards-row {
     display: flex;
     flex-wrap: wrap;
 }
-.cards-row>*{
+
+.cards-row>* {
     width: 100%;
 }
+
 /* <!-- cards section end--> */
 
 
 /* <!-- easy-way section  start  --> */
 
-.smart{
-    height: 100vh;
+.smart {
+    /* height: 100vh; */
     margin-top: 3rem;
-    background-image:linear-gradient(90deg,#7d7d7d00,#c1c1c144) , url('./../assets/bg-1.jpg');
+    padding: 5rem 0;
+    background-image: url('./../assets/bg-1.jpg');
     background-size: cover;
-}
-.smart-container-row{
-    display: flex;
-    justify-content: center;
-}
-.smart-container-col{
-    width: 100%;
-    padding: 2.5rem;
-}
-.easy-way h3{
-    color: #ff224f;
-}
-.easy-way h2{
- text-transform: capitalize;
- margin: 1rem 0 2.5rem;
- font-weight: 600;
+    background-position: center;
 }
 
+.smart-container-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.smart-container-col-1 {
+    width: 100%;
+    padding: 2.5rem;
+    background-color: #ffffff69;
+
+}
+
+.easy-way h2 {
+    text-transform: capitalize;
+    margin: 1rem 0 2rem;
+}
+
+.smart-container-col-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.smart-container-col-2>* {
+    flex: 1 1 100%;
+    padding: 2.5rem;
+    background-color: #ffffff69;
+}
+
+.creative-box h2,
+.clean-box h2 {
+    margin: 1rem 0;
+}
 
 /* <!-- easy-way section  end  --> */
 
@@ -166,34 +213,47 @@ h2{
 
 
 @media only screen and (min-width:479px) {
-    .hero-section .container{
+    .hero-section .container {
         justify-content: flex-start;
         text-align: unset;
     }
 
-    .cards-row>*{
+    .cards-row>* {
         width: 50%;
     }
 
+    .smart-container-col-2 {
+        flex-direction: row;
+    }
+
+    .smart-container-col-2>* {
+        flex: 1 1 100%;
+        padding: 3.5rem 2.5rem 2.5rem;
+    }
 
 }
+
 @media only screen and (min-width:766px) {
-    .cards-row>*{
+    .cards-row>* {
         width: 33.33%;
     }
 
-   
+
 
 }
+
 @media only screen and (min-width:990px) {
-    .cards-row>*{
+    .cards-row>* {
         width: 25%;
     }
-    .smart-container-row{
-        justify-content: flex-end;
+
+    .smart-container-row {
+        align-items: flex-end;
     }
-    .smart-container-col{
+
+    .smart-container-col-1,
+    .smart-container-col-2 {
         width: 50%;
-        padding: 2.5rem;
+
     }
 }
