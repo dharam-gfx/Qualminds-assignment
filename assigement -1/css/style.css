@@ -40,6 +40,8 @@ h2 {
 
 h3 {
     color: #ff224f;
+    word-spacing: 2px;
+
 
 }
 .my-1 {
@@ -48,6 +50,12 @@ h3 {
 .my-2{
     margin: 2rem 0;
 
+}
+.py-2{
+    padding: 2rem 0;
+}
+.py-5{
+    padding: 5rem 0;
 }
 
 /* global css  end*/
@@ -105,7 +113,7 @@ h3 {
 
 /* <!-- hero section end  --> */
 
-/* <!-- cards section  start--> */
+/* <!-- cards & cards-2 , PROJECT section  start--> */
 /* .cards{
     position: relative;
     top: -200px;
@@ -143,16 +151,16 @@ h3 {
     padding-bottom: 2rem;
 }
 
-.cards-row {
+.cards-row ,.cards_2-row,.project-cards-row{
     display: flex;
     flex-wrap: wrap;
 }
 
-.cards-row>* {
+.cards-row>*,.cards_2-row>*,.project-cards-row>* {
     width: 100%;
 }
 
-/* <!-- cards section end--> */
+/* <!-- cards & cards-2, PROJECT section end--> */
 
 
 /* <!-- easy-way section  start  --> */
@@ -160,7 +168,6 @@ h3 {
 .smart {
     /* height: 100vh; */
     margin-top: 3rem;
-    padding: 5rem 0;
     background-image: url('./../assets/bg-1.jpg');
     background-size: cover;
     background-position: center;
@@ -202,15 +209,94 @@ h3 {
     margin: 1rem 0;
 }
 
+
 /* <!-- easy-way section  end  --> */
 
 
+/* <!-- cards-2 section  start--> */
+
+.cards_2-col img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+
+}
+.cards_2-row .cards_2-col:nth-child(even){
+    padding:2rem 0.8rem ;
+    color: white ;
+    background-color: #232323;
+}
+.cards_2-row .cards_2-col:nth-child(even) p:last-child{
+color: #ff224f;
+margin-top: 2rem;
+}
+/* <!-- cards-2 section  end--> */
+
+/* <!-- PROJECT SECTION START  --> */
+
+.project-header{
+    text-align: center;
+}
+.project-cards-col{
+    padding: 1rem;
+}
+.project-cards-img{
+height: 100%;
+height: 280px;
+
+}
+.project-cards-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* <!-- PROJECT SECTION END  --> */
+
+/* <!-- FEATURES SECTION START  --> */
+
+.features-row{
+    display: flex;
+    flex-direction: column;
+}
+.features-row>*{
+    width: 100%;
+}
+.features-col{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.features-content h3{
+    font-size: 22px;
+}
+.features-content h2{
+    font-size: 30px;
+}
+.features-content ol{
+    list-style-position: inside;
+}
+.features-content ol li{
+    margin: 0.8rem 0;
+    font-style: italic;
+    color: gray;
+    font-size: 18px;
+}
+.features-img img{
+    width: 100%;
+}
+.features-col-1{
+    padding: 1rem;
+}
 
 
+/* <!-- FEATURES SECTION START  --> */
 
-
-
-
+.skills{
+    background-image: url('./../assets/bg-2.jpg');
+    background-size: cover;
+    height: 700px;
+}
 
 @media only screen and (min-width:479px) {
     .hero-section .container {
@@ -218,7 +304,7 @@ h3 {
         text-align: unset;
     }
 
-    .cards-row>* {
+    .cards-row>*,.cards_2-row>*,.project-cards-row>* {
         width: 50%;
     }
 
@@ -230,20 +316,27 @@ h3 {
         flex: 1 1 100%;
         padding: 3.5rem 2.5rem 2.5rem;
     }
-
 }
 
 @media only screen and (min-width:766px) {
-    .cards-row>* {
+    .cards-row>* ,.cards_2-row>*,.project-cards-row>*{
         width: 33.33%;
     }
-
-
-
+    .features-row{
+        flex-direction: row;
+    }
+    .features-col{
+        padding: 2rem;
+    }
+   
+    .features-col-1{
+        display: grid;
+        align-items: center;
+    }
 }
 
 @media only screen and (min-width:990px) {
-    .cards-row>* {
+    .cards-row>*,.cards_2-row>*,.project-cards-row>* {
         width: 25%;
     }
 
@@ -254,6 +347,5 @@ h3 {
     .smart-container-col-1,
     .smart-container-col-2 {
         width: 50%;
-
     }
 }
